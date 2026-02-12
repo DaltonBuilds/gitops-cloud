@@ -1,0 +1,19 @@
+# For lab speed, secrets are injected locally; in production use Key Vault/External Secrets or SOPS!
+
+authentik:
+  secret_key: "GENERATE_ONE" # [ex: `openssl rand -base64 48`]
+    postgresql:
+        password: "PASSWORD" 
+        
+server:
+    ingress:
+        # Specify kubernetes ingress controller class name
+        ingressClassName: traefik
+        enabled: true
+        hosts:
+          - auth.domain.tld 
+
+postgresql:
+    enabled: true
+    auth:
+        password: "PASSWORD"
