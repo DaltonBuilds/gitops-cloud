@@ -1,3 +1,7 @@
+# Authentik Values (Real - for AKS lab, allow example)
+authentik.values.yaml
+!authentik.values.example.yaml
+
 # Local .terraform directories
 .terraform/
 
